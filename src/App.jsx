@@ -8,17 +8,17 @@ const App = () => {
   const [contents, setContents]= useState(null);
 
   useEffect(()=>{
-    fetch("http://localhost:5000/api/course")
+    fetch("https://lactationcoursedashboard-backend-production.up.railway.app//api/course")
       .then(res=>res.json())
       .then(data=>setContents(data));
   },[]);
 
   const handleCheck=async(key)=>{
-    await fetch(`http://localhost:5000/api/course/${key}`,{
+    await fetch(`https://lactationcoursedashboard-backend-production.up.railway.app//api/course/${key}`,{
       method:"PUT"
     });
 
-    const res = await fetch("http://localhost:5000/api/course");
+    const res = await fetch("https://lactationcoursedashboard-backend-production.up.railway.app//api/course");
     const data = await res.json();
     setContents(data);
   }
