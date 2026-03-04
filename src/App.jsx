@@ -8,7 +8,7 @@ const App = () => {
   const [contents, setContents]= useState(null);
 
   useEffect(()=>{
-    fetch("https://lactationcoursedashboard-backend-production.up.railway.app//api/course")
+    fetch("https://lactationcoursedashboard-backend-production.up.railway.app/api/course")
       .then(res=>res.json())
       .then(data=>setContents(data));
   },[]);
@@ -18,7 +18,7 @@ const App = () => {
       method:"PUT"
     });
 
-    const res = await fetch("https://lactationcoursedashboard-backend-production.up.railway.app//api/course");
+    const res = await fetch("https://lactationcoursedashboard-backend-production.up.railway.app/api/course");
     const data = await res.json();
     setContents(data);
   }
