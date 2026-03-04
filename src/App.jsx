@@ -14,7 +14,7 @@ const App = () => {
   },[]);
 
   const handleCheck=async(key)=>{
-    await fetch(`https://lactationcoursedashboard-backend-production.up.railway.app//api/course/${key}`,{
+    await fetch(`https://lactationcoursedashboard-backend-production.up.railway.app/api/course/${key}`,{
       method:"PUT"
     });
 
